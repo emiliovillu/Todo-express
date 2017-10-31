@@ -1,0 +1,38 @@
+body{
+  background-color: rgb(82, 121, 67);
+}
+
+label{
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+span{
+  font-size: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+button{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+a{
+  color: black
+}
+form{
+  margin-bottom: 50px;
+}
+.delete{
+  display: inline;
+}
+.completed{
+  display: inline;
+}
+.task{
+  font-size: 20px;
+}
+li{
+  margin-bottom: 25px;
+}
+

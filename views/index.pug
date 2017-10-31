@@ -1,0 +1,31 @@
+extends layout/index
+
+block content
+  .row
+    .col-md-6
+      form(action='/new', method='POST', role='form')
+        legend Form Add Task
+        label(for='task') Task
+        input(type='text', name='task', autofocus, placeholder='Add Task..')
+        button(type="submit" class="btn btn-primary add-task")
+          |add task
+    .col-md-6
+      form(action='/allcompleted', method='POST', role='form')
+        button(type="submit" class="btn btn-primary")
+          | All completed task
+  .row
+    .col-md-12
+      ul(class="list-unstyled")
+        each task in tasks
+          li
+            form(action='/delete/' + task.id, method='POST',class='delete', role='form')
+              button(type="submit" class="btn btn-danger")
+                | delete task
+            span(class='task') #{task.title}
+            form(action='/completed/' + task.id, method='POST',class='completed', role='form')
+              button(type="submit" class="btn btn-primary")
+                | completed task
+              a.btn.btn-warning.btn-md.edit(href='/edit/' + task.id) Edit
+
+
+  

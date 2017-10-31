@@ -1,0 +1,14 @@
+extends layout/index
+  
+  
+block content
+    h1|COMPLETED TASK
+      ul(class="list-unstyled")
+        each task in tasks
+          li
+          form(action='/delete/' + task.id, method='POST', role='form')
+            button(type="submit" class="btn btn-danger")
+              | delete task
+            span #{task.title}
+        
+          
