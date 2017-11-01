@@ -15,9 +15,9 @@ block content
           | All completed task
   .row
     .col-md-12
-      ul(class="list-unstyled")
+      ul.list-group.list-unstyled
         each task in tasks
-          li
+          li.list-group
             form(action='/delete/' + task.id, method='POST',class='delete', role='form')
               button(type="submit" class="btn btn-danger")
                 | delete task

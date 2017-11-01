@@ -2,6 +2,7 @@ $('.edit-task').on('submit', function(e) {
   e.preventDefault()
   console.log('submit...')
   const idTask = $(this).data('id')
+  console.log(idTask)
   const title = $(this).find('[name="task"]').val()
   
   const url = `/edit/${idTask}`
@@ -10,9 +11,7 @@ $('.edit-task').on('submit', function(e) {
 
   $.ajax({ url, method, data })
     .then( response => {
-     
-      console.log(response)
       window.location.href = '/'
     })
-
 })
+
